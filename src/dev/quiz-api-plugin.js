@@ -29,6 +29,23 @@ export default function quizApiPlugin() {
   return {
     name: 'quiz-dev-api',
     configureServer(server) {
+      // Backend dashboard API stubs (KV not available in vite dev)
+      server.middlewares.use((req, res, next) => {
+        if (!req.url.startsWith('/api/backend')) return next()
+        res.setHeader('Content-Type', 'application/json')
+        res.setHeader('Cache-Control', 'no-store')
+
+        if (req.url.startsWith('/api/backend/stats')) {
+          res.end(JSON.stringify([]))
+        } else if (req.url.startsWith('/api/backend/responses') && req.method === 'DELETE') {
+          res.end(JSON.stringify({ ok: true }))
+        } else if (req.url.startsWith('/api/backend/responses')) {
+          res.end(JSON.stringify({ responses: [], cursor: null, hasMore: false }))
+        } else {
+          next()
+        }
+      })
+
       server.middlewares.use(async (req, res, next) => {
         if (!req.url.startsWith('/api/dev/quizzes')) return next()
 
