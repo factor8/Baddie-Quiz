@@ -126,7 +126,7 @@ export default function Results({ quiz, score, onRestart }) {
           }}
           className="w-full gold-shimmer bg-gradient-to-r from-orange-600 to-orange-500 text-teal-950 font-display font-bold text-base py-3.5 rounded-xl cursor-pointer tracking-wide shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 transition-shadow duration-300"
         >
-          Share Your L (or W)
+          {quiz.shareButtonText || 'Share Your L (or W)'}
         </motion.button>
 
         <motion.button

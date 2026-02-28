@@ -71,6 +71,7 @@ export default function AdminPanel({ onBack }) {
       tagline: '',
       cta: 'Start',
       shareTitle: 'New Quiz',
+      shareButtonText: 'Share Your L (or W)',
       questions: [],
       verdicts: [],
     }

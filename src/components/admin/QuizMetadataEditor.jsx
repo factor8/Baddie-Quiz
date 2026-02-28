@@ -5,6 +5,7 @@ const FIELDS = [
   { key: 'tagline', label: 'Tagline', placeholder: 'Catchy tagline' },
   { key: 'cta', label: 'CTA Button', placeholder: 'Begin the Reckoning' },
   { key: 'shareTitle', label: 'Share Title', placeholder: 'Title for sharing' },
+  { key: 'shareButtonText', label: 'Share Button Text', placeholder: 'Share Your L (or W)' },
 ]
 
 export default function QuizMetadataEditor({ quiz, onChange }) {
