@@ -23,7 +23,7 @@ const verdictColors = {
   },
 }
 
-export default function Results({ quiz, score, onRestart }) {
+export default function Results({ quiz, score, answers, onRestart }) {
   const verdict = getVerdict(score, quiz.verdicts)
   const colors = verdictColors[verdict.color]
   const [stats, setStats] = useState(null)
@@ -32,7 +32,7 @@ export default function Results({ quiz, score, onRestart }) {
     fetch('/api/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ quizId: quiz.id, verdict: verdict.key }),
+      body: JSON.stringify({ quizId: quiz.id, verdict: verdict.key, score, answers }),
     })
       .then((res) => res.json())
       .then((data) => setStats(data))

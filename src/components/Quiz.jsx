@@ -6,26 +6,30 @@ import Question from './Question'
 export default function Quiz({ quiz, onComplete }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [score, setScore] = useState(0)
+  const [answers, setAnswers] = useState([])
   const [direction, setDirection] = useState(1) // 1 = forward
 
   const questions = quiz.questions
   const question = questions[currentIndex]
   const progress = ((currentIndex) / questions.length) * 100
 
-  const handleAnswer = (points) => {
+  const handleAnswer = (points, answerDetail) => {
     const newScore = score + points
+    const newAnswers = [...answers, { questionId: question.id, questionText: question.text, ...answerDetail }]
     setDirection(1)
 
     if (currentIndex < questions.length - 1) {
       setCurrentIndex(currentIndex + 1)
       setScore(newScore)
+      setAnswers(newAnswers)
     } else {
-      onComplete(newScore)
+      onComplete(newScore, newAnswers)
     }
   }
 
   const handleSlider = (value) => {
-    handleAnswer(sliderToScore(value, question.scoreMax))
+    const pts = sliderToScore(value, question.scoreMax)
+    handleAnswer(pts, { type: 'slider', value, score: pts })
   }
 
   return (

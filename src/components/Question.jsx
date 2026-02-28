@@ -24,7 +24,7 @@ export default function Question({ question, direction, onAnswer, onSlider, isDe
   const handleOptionClick = (option, index) => {
     setSelected(index)
     // Small delay for visual feedback
-    setTimeout(() => onAnswer(option.score), 300)
+    setTimeout(() => onAnswer(option.score, { type: 'choice', answerText: option.text, score: option.score }), 300)
   }
 
   const handleSliderSubmit = () => {

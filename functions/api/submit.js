@@ -2,7 +2,7 @@ export async function onRequestPost(context) {
   const { request, env } = context
 
   try {
-    const { quizId, verdict } = await request.json()
+    const { quizId, verdict, score, answers } = await request.json()
 
     // Validate the verdict key
     const validKeys = ['green', 'yellow', 'orange', 'red']
@@ -27,6 +27,19 @@ export async function onRequestPost(context) {
 
     // Write back to KV
     await env.RESULTS.put(kvKey, JSON.stringify(stats))
+
+    // Store individual response with full answer detail
+    if (answers) {
+      const ts = Date.now()
+      const responseKey = `response:${quizId || 'default'}:${ts}`
+      await env.RESULTS.put(responseKey, JSON.stringify({
+        quizId,
+        verdict,
+        score,
+        answers,
+        submittedAt: new Date(ts).toISOString(),
+      }))
+    }
 
     return new Response(JSON.stringify(stats), {
       headers: { 'Content-Type': 'application/json' },

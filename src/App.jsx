@@ -16,13 +16,15 @@ const DevToolbar = import.meta.env.DEV
 function App() {
   const [screen, setScreen] = useState('landing') // landing | quiz | results | admin
   const [finalScore, setFinalScore] = useState(0)
+  const [finalAnswers, setFinalAnswers] = useState([])
   const [quizList, setQuizList] = useState(quizzes)
   const [currentQuiz, setCurrentQuiz] = useState(quizzes[0])
 
   const handleStart = () => setScreen('quiz')
 
-  const handleComplete = (score) => {
+  const handleComplete = (score, answers) => {
     setFinalScore(score)
+    setFinalAnswers(answers)
     setScreen('results')
   }
 
@@ -61,7 +63,7 @@ function App() {
           <Quiz key={`quiz-${currentQuiz.id}`} quiz={currentQuiz} onComplete={handleComplete} />
         )}
         {screen === 'results' && (
-          <Results key={`results-${currentQuiz.id}`} quiz={currentQuiz} score={finalScore} onRestart={handleRestart} />
+          <Results key={`results-${currentQuiz.id}`} quiz={currentQuiz} score={finalScore} answers={finalAnswers} onRestart={handleRestart} />
         )}
         {screen === 'admin' && AdminPanel && (
           <Suspense key="admin" fallback={<div className="text-teal-400">Loading editor...</div>}>
