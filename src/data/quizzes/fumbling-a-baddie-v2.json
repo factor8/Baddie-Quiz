@@ -47,7 +47,7 @@
           "score": -5
         },
         {
-          "text": "Nothing. She can handler it.",
+          "text": "Nothing. She can handle it.",
           "score": -10
         }
       ]
@@ -165,7 +165,7 @@
       "key": "green",
       "emoji": "🟢",
       "min": 25,
-      "max": 38,
+      "max": 100,
       "title": "She Might Actually Keep You",
       "description": "Against all odds, you might not be delusional. Stay sharp. Woo that woman like you’re still trying to get her number.",
       "color": "teal"
