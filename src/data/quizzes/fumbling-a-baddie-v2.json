@@ -1,0 +1,124 @@
+{
+  "id": "fumbling-a-baddie-v2",
+  "title": "Are You Fumbling A Baddie?",
+  "subtitle": "She\u2019s a 10. You\u2019re... under review.",
+  "tagline": "Every question is a scene. Every answer is a confession.",
+  "cta": "Begin the Reckoning",
+  "shareTitle": "Are You Fumbling A Baddie?",
+
+  "questions": [
+    {
+      "id": 1,
+      "text": "She posts a thirst trap and it goes viral. Your first thought?",
+      "type": "choice",
+      "options": [
+        { "text": "That\u2019s my girl. Everyone can look, I get to touch.", "score": 5 },
+        { "text": "She\u2019s so fine it\u2019s actually insane", "score": 3 },
+        { "text": "Why does she need that kind of attention?", "score": -5 },
+        { "text": "I wouldn\u2019t say anything but it would bother me", "score": -3 }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "She tells you she\u2019s going out with her girls tonight. No details. What\u2019s running through your head?",
+      "type": "choice",
+      "options": [
+        { "text": "Have fun, be safe, call me when you\u2019re home if you want", "score": 5 },
+        { "text": "Cool, I\u2019ve got my own plans anyway", "score": 3 },
+        { "text": "Where? Who\u2019s going? What time will you be back?", "score": -5 },
+        { "text": "I don\u2019t say anything but I check her location", "score": -8 }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "When she\u2019s going OFF about something \u2014 loud, passionate, maybe a little unhinged \u2014 your move is:",
+      "type": "choice",
+      "options": [
+        { "text": "Let her ride it out. I\u2019m here when the storm passes.", "score": 5 },
+        { "text": "Match her energy. We\u2019re both yelling now. It\u2019s kind of fun.", "score": 2 },
+        { "text": "Try to logic her out of it because she\u2019s being \u2018irrational\u2019", "score": -5 },
+        { "text": "Tell her she\u2019s overreacting and walk away", "score": -8 }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Be honest \u2014 do you actually see a future with her?",
+      "type": "choice",
+      "options": [
+        { "text": "Yeah. Her, exactly as she is. That\u2019s the girl I want.", "score": 10 },
+        { "text": "I think so but I\u2019m scared to say it out loud", "score": 3 },
+        { "text": "I would if she calmed down a little", "score": -8 },
+        { "text": "I\u2019m just seeing where it goes (it\u2019s been 6 months)", "score": -10 }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "What do you actually like about her? Pick the one that\u2019s most true.",
+      "type": "choice",
+      "options": [
+        { "text": "She\u2019s the most interesting person I\u2019ve ever met", "score": 5 },
+        { "text": "She makes me want to be better without even trying", "score": 5 },
+        { "text": "She\u2019s hot and the sex is crazy", "score": -2 },
+        { "text": "I honestly don\u2019t know anymore", "score": -10 }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "She wants to talk about \u2018us.\u2019 Your honest reaction?",
+      "type": "choice",
+      "options": [
+        { "text": "Good. I have things I want to say too.", "score": 5 },
+        { "text": "Nervous, but I\u2019m showing up for it", "score": 3 },
+        { "text": "Immediately assume it\u2019s a trap", "score": -3 },
+        { "text": "Pretend I didn\u2019t see the text until tomorrow", "score": -8 }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "On a scale of 0\u201310, how much does her intensity scare you?",
+      "type": "slider",
+      "min": 0,
+      "max": 10,
+      "labels": { "low": "I signed up for this", "high": "Every single day" }
+    }
+  ],
+
+  "verdicts": [
+    {
+      "key": "green",
+      "emoji": "\ud83d\udfe2",
+      "min": 25,
+      "max": 38,
+      "title": "She Might Actually Keep You",
+      "description": "Against all odds, you might not be delusional. You see her \u2014 actually see her \u2014 and you\u2019re not running. That\u2019s rare. Don\u2019t let this go to your head though. She chose you, which means she can un-choose you. Stay sharp. Woo that woman like you\u2019re still trying to get her number.",
+      "color": "teal"
+    },
+    {
+      "key": "yellow",
+      "emoji": "\ud83d\udfe1",
+      "min": 10,
+      "max": 24,
+      "title": "The Fumble Is Loading\u2026",
+      "description": "You\u2019re giving just enough to stay in the game but not enough to win. She\u2019s noticed the gaps. She\u2019s not saying anything yet because she\u2019s hoping you\u2019ll figure it out \u2014 but she\u2019s also mentally drafting the roster of people in her DMs who WOULD figure it out. You have maybe one more season of this behavior before she\u2019s gone. The bar is underground and you\u2019re still tripping over it.",
+      "color": "orange"
+    },
+    {
+      "key": "orange",
+      "emoji": "\ud83d\udfe0",
+      "min": 0,
+      "max": 9,
+      "title": "Fumble in Progress \u2014 All Units Respond",
+      "description": "Sir, the bag is in the air and you\u2019re watching it fall in slow motion while checking your fantasy football lineup. She\u2019s not asking for the moon. She\u2019s asking you to show up, speak up, and act like you actually want to be here. You are currently failing at all three. This is your \u2018before\u2019 era. The question is whether you have an \u2018after.\u2019",
+      "color": "orange"
+    },
+    {
+      "key": "red",
+      "emoji": "\ud83d\udd34",
+      "min": -9999,
+      "max": -1,
+      "title": "Certified Fumbler \u2014 She\u2019s Already Gone",
+      "description": "She\u2019s not writing the \u2018I\u2019ve been thinking\u2026\u2019 text anymore. She wrote it, deleted it, rewrote it, and then decided you don\u2019t even deserve an explanation. Her friends have a group chat about you and the name of it would make you cry. She\u2019s going to look incredible at the function this weekend and you\u2019re going to see the pictures and realize what you had. This isn\u2019t a wake-up call. This is the obituary.",
+      "color": "red"
+    }
+  ]
+}

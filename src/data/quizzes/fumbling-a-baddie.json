@@ -1,0 +1,99 @@
+{
+  "id": "fumbling-a-baddie",
+  "title": "Are You About to Fumble This Baddie?",
+  "subtitle": "She's a 10. You're... taking this quiz.",
+  "tagline": "Let's see where you stand.",
+  "cta": "Begin the Reckoning",
+  "shareTitle": "Are You About to Fumble This Baddie?",
+
+  "questions": [
+    {
+      "id": 1,
+      "text": "On a scale of 0\u201310, how scared are you of falling in love with her?",
+      "type": "slider",
+      "min": 0,
+      "max": 10,
+      "labels": { "low": "Not even a little", "high": "Absolutely terrified" }
+    },
+    {
+      "id": 2,
+      "text": "When a bitch be crazy, the right move is:",
+      "type": "choice",
+      "options": [
+        { "text": "Tell her to calm the fuck down", "score": -5 },
+        { "text": "Let her know she can let it all out", "score": 5 },
+        { "text": "Try to out-crazy her", "score": -3 }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "She\u2019s having a bad day. What\u2019s the move?",
+      "type": "choice",
+      "options": [
+        { "text": "Pull up with a sweet treat and let her vent", "score": 5 },
+        { "text": "Call her and listen", "score": 2 },
+        { "text": "\"Damn that's crazy\" over text", "score": -2 },
+        { "text": "Leave her on read, she\u2019ll figure it out", "score": -10 }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Be honest \u2014 do you actually see a future with her?",
+      "type": "choice",
+      "options": [
+        { "text": "Yeah, and it doesn\u2019t scare me to say that", "score": 10 },
+        { "text": "I think so but I don\u2019t wanna jinx it", "score": 5 },
+        { "text": "I try not to think about it", "score": -5 },
+        { "text": "I\u2019m just seeing where it goes (indefinitely)", "score": -10 }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Do you hate her?",
+      "type": "choice",
+      "options": [
+        { "text": "No", "score": 5 },
+        { "text": "Yes", "score": -5 }
+      ]
+    }
+  ],
+
+  "verdicts": [
+    {
+      "key": "green",
+      "emoji": "\ud83d\udfe2",
+      "min": 20,
+      "max": 30,
+      "title": "You Might Actually Deserve Her",
+      "description": "Rare. Don\u2019t get comfortable though. Woo that bitch.",
+      "color": "teal"
+    },
+    {
+      "key": "yellow",
+      "emoji": "\ud83d\udfe1",
+      "min": 10,
+      "max": 19,
+      "title": "You\u2019re Slipping",
+      "description": "She\u2019s noticed. You still have time but the clock is ticking. She\u2019s a baddie. Woo that bitch.",
+      "color": "orange"
+    },
+    {
+      "key": "orange",
+      "emoji": "\ud83d\udfe0",
+      "min": 0,
+      "max": 9,
+      "title": "The Fumble Is in Motion",
+      "description": "The bag is mid-air. You\u2019re just watching it fall. Think twice. Woo that bitch.",
+      "color": "orange"
+    },
+    {
+      "key": "red",
+      "emoji": "\ud83d\udd34",
+      "min": -9999,
+      "max": -1,
+      "title": "Certified Fumbler",
+      "description": "She\u2019s already writing the \"I\u2019ve been thinking...\" text in her Notes app. You\u2019re cooked.",
+      "color": "red"
+    }
+  ]
+}
