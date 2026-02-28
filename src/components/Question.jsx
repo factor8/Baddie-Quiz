@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { sliderToScore } from '../data/questions'
 
 const variants = {
   enter: (direction) => ({
@@ -16,7 +17,7 @@ const variants = {
   }),
 }
 
-export default function Question({ question, direction, onAnswer, onSlider }) {
+export default function Question({ question, direction, onAnswer, onSlider, isDev }) {
   const [sliderValue, setSliderValue] = useState(5)
   const [selected, setSelected] = useState(null)
 
@@ -77,6 +78,11 @@ export default function Question({ question, direction, onAnswer, onSlider }) {
             <span className="text-orange-400 font-display text-4xl font-bold">
               {sliderValue}
             </span>
+            {isDev && (
+              <span className={`ml-3 font-mono text-sm px-2 py-1 rounded ${sliderToScore(sliderValue) >= 0 ? 'bg-green-900/50 text-green-400' : 'bg-red-900/50 text-red-400'}`}>
+                {sliderToScore(sliderValue) > 0 ? '+' : ''}{sliderToScore(sliderValue)} pts
+              </span>
+            )}
           </div>
 
           <motion.button
@@ -104,7 +110,14 @@ export default function Question({ question, direction, onAnswer, onSlider }) {
                 }
               `}
             >
-              {option.text}
+              <span className="flex justify-between items-center gap-2">
+                <span>{option.text}</span>
+                {isDev && (
+                  <span className={`shrink-0 font-mono text-xs px-1.5 py-0.5 rounded ${option.score >= 0 ? 'bg-green-900/50 text-green-400' : 'bg-red-900/50 text-red-400'}`}>
+                    {option.score > 0 ? '+' : ''}{option.score}
+                  </span>
+                )}
+              </span>
             </motion.button>
           ))}
         </div>

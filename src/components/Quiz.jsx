@@ -63,6 +63,7 @@ export default function Quiz({ quiz, onComplete }) {
           direction={direction}
           onAnswer={handleAnswer}
           onSlider={handleSlider}
+          isDev={import.meta.env.DEV}
         />
       </AnimatePresence>
 
@@ -75,7 +76,7 @@ export default function Quiz({ quiz, onComplete }) {
           >
             Prev
           </button>
-          <span className="text-teal-600 text-xs self-center">dev</span>
+          <span className="text-orange-400 text-xs self-center font-mono">Score: {score}</span>
           <button
             onClick={() => { setDirection(1); setCurrentIndex(Math.min(questions.length - 1, currentIndex + 1)) }}
             disabled={currentIndex === questions.length - 1}
