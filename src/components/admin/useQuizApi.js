@@ -2,12 +2,12 @@ const BASE = '/api/dev/quizzes'
 
 export function useQuizApi() {
   const listQuizzes = async () => {
-    const res = await fetch(BASE)
+    const res = await fetch(BASE, { cache: 'no-store' })
     return res.json()
   }
 
   const getQuiz = async (id) => {
-    const res = await fetch(`${BASE}/${encodeURIComponent(id)}`)
+    const res = await fetch(`${BASE}/${encodeURIComponent(id)}`, { cache: 'no-store' })
     return res.json()
   }
 

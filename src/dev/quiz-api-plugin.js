@@ -33,6 +33,7 @@ export default function quizApiPlugin() {
         if (!req.url.startsWith('/api/dev/quizzes')) return next()
 
         res.setHeader('Content-Type', 'application/json')
+        res.setHeader('Cache-Control', 'no-store')
 
         const urlPath = req.url.split('?')[0]
         const quizId = urlPath.replace('/api/dev/quizzes', '').replace(/^\//, '') || null

@@ -79,8 +79,8 @@ export default function Question({ question, direction, onAnswer, onSlider, isDe
               {sliderValue}
             </span>
             {isDev && (
-              <span className={`ml-3 font-mono text-sm px-2 py-1 rounded ${sliderToScore(sliderValue) >= 0 ? 'bg-green-900/50 text-green-400' : 'bg-red-900/50 text-red-400'}`}>
-                {sliderToScore(sliderValue) > 0 ? '+' : ''}{sliderToScore(sliderValue)} pts
+              <span className={`ml-3 font-mono text-sm px-2 py-1 rounded ${sliderToScore(sliderValue, question.scoreMax) >= 0 ? 'bg-green-900/50 text-green-400' : 'bg-red-900/50 text-red-400'}`}>
+                {sliderToScore(sliderValue, question.scoreMax) > 0 ? '+' : ''}{sliderToScore(sliderValue, question.scoreMax)} pts
               </span>
             )}
           </div>

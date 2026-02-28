@@ -37,13 +37,13 @@ git push -u origin main
 
 ### 3. Configure Build Settings
 
-| Setting              | Value           |
-| -------------------- | --------------- |
-| **Framework preset** | None            |
-| **Build command**    | `npm run build` |
-| **Build output directory** | `dist`    |
-| **Root directory**   | `/` (default)   |
-| **Node.js version**  | `18` or higher  |
+| Setting                          | Value             |
+| -------------------------------- | ----------------- |
+| **Framework preset**       | None              |
+| **Build command**          | `npm run build` |
+| **Build output directory** | `dist`          |
+| **Root directory**         | `/` (default)   |
+| **Node.js version**        | `18` or higher  |
 
 > If the Node version isn't an option in the UI, add an environment variable:
 > `NODE_VERSION` = `18`
@@ -81,12 +81,14 @@ id = "paste-your-actual-kv-namespace-id-here"
 ### 7. Redeploy
 
 After binding KV, trigger a redeploy:
+
 - Push a new commit, **or**
 - Go to your Pages project → **Deployments** → click **Retry deployment** on the latest deploy
 
 Your app is now live at:
+
 ```
-https://are-you-fumbling-a-baddie.pages.dev
+ https://are-you-fumbling-a-baddie.pages.dev
 ```
 
 ---
@@ -199,13 +201,13 @@ npm run dev
 
 ## Troubleshooting
 
-| Problem | Fix |
-| ------- | --- |
-| Build fails with Node version error | Set `NODE_VERSION=18` in Pages environment variables |
-| `/api/submit` returns 500 | Make sure KV binding `RESULTS` is set in Pages settings |
-| KV data not persisting | Verify the namespace ID in `wrangler.toml` matches the one in the dashboard |
-| Styles look broken | Clear cache and redeploy — ensure `dist/` contains the CSS assets |
-| Functions not executing | Confirm `functions/` directory is at the project root (not inside `src/`) |
+| Problem                             | Fix                                                                           |
+| ----------------------------------- | ----------------------------------------------------------------------------- |
+| Build fails with Node version error | Set `NODE_VERSION=18` in Pages environment variables                        |
+| `/api/submit` returns 500         | Make sure KV binding `RESULTS` is set in Pages settings                     |
+| KV data not persisting              | Verify the namespace ID in `wrangler.toml` matches the one in the dashboard |
+| Styles look broken                  | Clear cache and redeploy — ensure `dist/` contains the CSS assets          |
+| Functions not executing             | Confirm `functions/` directory is at the project root (not inside `src/`) |
 
 ---
 

@@ -25,7 +25,7 @@ export default function Quiz({ quiz, onComplete }) {
   }
 
   const handleSlider = (value) => {
-    handleAnswer(sliderToScore(value))
+    handleAnswer(sliderToScore(value, question.scoreMax))
   }
 
   return (

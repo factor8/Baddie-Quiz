@@ -40,8 +40,13 @@ export default function Landing({ quiz, onStart }) {
         transition={{ delay: 1.0 }}
         className="text-teal-200 font-body text-base sm:text-lg mb-8 leading-relaxed"
       >
-        {quiz.subtitle} <br />
-        <span className="text-orange-400 italic">{quiz.tagline}</span>
+        {quiz.subtitle}
+        {quiz.tagline && (
+          <>
+            <br />
+            <span className="text-orange-400 italic">{quiz.tagline}</span>
+          </>
+        )}
       </motion.p>
 
       <motion.button

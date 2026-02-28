@@ -1,0 +1,176 @@
+{
+  "id": "fumbling-a-baddie-v3",
+  "title": "Are You Fumbling This Baddie?",
+  "subtitle": "She's a 10. You're... doing this quiz. ",
+  "tagline": "",
+  "cta": "Find Out If You're Cooked",
+  "shareTitle": "Are You Fumbling This Baddie?",
+  "shareButtonText": "Put Yourself on Blast",
+  "questions": [
+    {
+      "id": 1,
+      "text": "She posts a thirst trap and it goes viral (AHHH). Your first thought?",
+      "type": "choice",
+      "options": [
+        {
+          "text": "I wouldn't say anything but it would bother me.",
+          "score": -2
+        },
+        {
+          "text": "She's so fine it's actually insane.",
+          "score": 2
+        },
+        {
+          "text": "That's my girl. Everyone can look, I get to touch.",
+          "score": 3
+        },
+        {
+          "text": "Why does she need that kind of attention?",
+          "score": -3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "She's having a rough day. What are you going to do about it?",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Call her and let her rant.",
+          "score": 3
+        },
+        {
+          "text": "Nothing. She can handle it.",
+          "score": -8
+        },
+        {
+          "text": "Cronut and Chill.",
+          "score": 4
+        },
+        {
+          "text": "Let her chill out and ask about it later.",
+          "score": -4
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "When she's going OFF about something --  loud, passionate, maybe a little unhinged -- your move is:",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Try to logic her out of it because she's being 'irrational'.",
+          "score": -3
+        },
+        {
+          "text": "Match her energy. We're both yelling now. It's kind of fun.",
+          "score": 3
+        },
+        {
+          "text": "Tell her she's overreacting and walk away.",
+          "score": -5
+        },
+        {
+          "text": "Let her ride it out. I'm here when the storm passes.",
+          "score": 3
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "What do you like about her? Pick the one that's most true.",
+      "type": "choice",
+      "options": [
+        {
+          "text": "She's hot and the sex is crazy.",
+          "score": -2
+        },
+        {
+          "text": "She's the most interesting person I've ever met.",
+          "score": 5
+        },
+        {
+          "text": "I honestly don't know anymore.",
+          "score": -10
+        },
+        {
+          "text": "She makes me want to be better without even trying.",
+          "score": 5
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "text": "She wants to talk about 'us.' Your honest reaction?",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Pretend I didn't see the text until tomorrow.",
+          "score": -6
+        },
+        {
+          "text": "Good. I probably have things I want to say too.",
+          "score": 4
+        },
+        {
+          "text": "Nervous, but I'm showing up for it.",
+          "score": 3
+        },
+        {
+          "text": "Immediately assume it's a trap.",
+          "score": -2
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "text": "On a scale of 0–10, how much does her intensity scare you?",
+      "type": "slider",
+      "min": 0,
+      "max": 10,
+      "scoreMax": 2,
+      "labels": {
+        "low": "I signed up for this",
+        "high": "I'm terrified and hate it"
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "key": "green",
+      "emoji": "🟢",
+      "min": 15,
+      "max": 100,
+      "title": "She Might Actually Keep You",
+      "description": "Against all odds, you might not be delusional. Stay sharp. Woo that woman like you're still trying to get her number.",
+      "color": "teal"
+    },
+    {
+      "key": "yellow",
+      "emoji": "🟡",
+      "min": 5,
+      "max": 14,
+      "title": " You're Slipping...",
+      "description": "She's noticed. You still have time but the clock is ticking. She's a baddie. Woo that bitch.",
+      "color": "orange"
+    },
+    {
+      "key": "orange",
+      "emoji": "🟠",
+      "min": -5,
+      "max": 4,
+      "title": "Fumble in Progress.",
+      "description": "Sir, the bag is in the air and you're watching it fall in slow motion. She's not asking for the moon. Talk to her. Believe in it. Woo that bitch.",
+      "color": "orange"
+    },
+    {
+      "key": "red",
+      "emoji": "🔴",
+      "min": -9999,
+      "max": -6,
+      "title": "Certified Fumbler... Sheesh",
+      "description": "She's going to look incredible at the functions when you see her (if you see her) and realize what you had. This isn't a wake-up call. This is the obituary. You're cooked. ",
+      "color": "red"
+    }
+  ]
+}
