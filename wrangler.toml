@@ -1,7 +1,7 @@
-name = "are-you-fumbling-a-baddie"
+name = "baddie-quiz"
 compatibility_date = "2024-09-23"
 pages_build_output_dir = "dist"
 
 [[kv_namespaces]]
 binding = "RESULTS"
-id = "baddie-quiz"
+id = "74d8ff8fcbfb413aa86ebf8626045b78"
