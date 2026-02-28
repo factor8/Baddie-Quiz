@@ -12,6 +12,7 @@ const AdminPanel = import.meta.env.DEV
 function App() {
   const [screen, setScreen] = useState('landing') // landing | quiz | results | admin
   const [finalScore, setFinalScore] = useState(0)
+  const [quizList, setQuizList] = useState(quizzes)
   const [currentQuiz, setCurrentQuiz] = useState(quizzes[0])
 
   const handleStart = () => setScreen('quiz')
@@ -27,12 +28,21 @@ function App() {
   }
 
   const handleQuizChange = (quizId) => {
-    const quiz = quizzes.find((q) => q.id === quizId)
+    const quiz = quizList.find((q) => q.id === quizId)
     if (quiz) {
       setCurrentQuiz(quiz)
       setFinalScore(0)
       setScreen('landing')
     }
+  }
+
+  const handleAdminBack = (updatedQuizzes) => {
+    if (updatedQuizzes) {
+      setQuizList(updatedQuizzes)
+      const refreshed = updatedQuizzes.find((q) => q.id === currentQuiz.id)
+      if (refreshed) setCurrentQuiz(refreshed)
+    }
+    setScreen('landing')
   }
 
   const isDev = import.meta.env.DEV
@@ -51,7 +61,7 @@ function App() {
         )}
         {screen === 'admin' && AdminPanel && (
           <Suspense key="admin" fallback={<div className="text-teal-400">Loading editor...</div>}>
-            <AdminPanel onBack={() => setScreen('landing')} />
+            <AdminPanel onBack={handleAdminBack} />
           </Suspense>
         )}
       </AnimatePresence>
@@ -93,7 +103,7 @@ function App() {
             onChange={(e) => handleQuizChange(e.target.value)}
             className="bg-teal-800/80 text-orange-300 text-xs px-2 py-1.5 rounded-lg border border-teal-600/50 cursor-pointer appearance-none"
           >
-            {quizzes.map((q) => (
+            {quizList.map((q) => (
               <option key={q.id} value={q.id}>{q.id}</option>
             ))}
           </select>

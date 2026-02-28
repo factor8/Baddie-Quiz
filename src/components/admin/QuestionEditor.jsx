@@ -27,6 +27,14 @@ export default function QuestionEditor({ question, onChange, onDelete }) {
     onChange({ ...question, options })
   }
 
+  const moveOption = (idx, direction) => {
+    const target = idx + direction
+    if (target < 0 || target >= question.options.length) return
+    const options = [...question.options]
+    ;[options[idx], options[target]] = [options[target], options[idx]]
+    onChange({ ...question, options })
+  }
+
   const addOption = () => {
     onChange({ ...question, options: [...question.options, { text: '', score: 0 }] })
   }
@@ -88,8 +96,12 @@ export default function QuestionEditor({ question, onChange, onDelete }) {
               key={idx}
               option={opt}
               index={idx}
+              isFirst={idx === 0}
+              isLast={idx === question.options.length - 1}
               onChange={updated => updateOption(idx, updated)}
               onDelete={() => deleteOption(idx)}
+              onMoveUp={() => moveOption(idx, -1)}
+              onMoveDown={() => moveOption(idx, 1)}
             />
           ))}
           <button

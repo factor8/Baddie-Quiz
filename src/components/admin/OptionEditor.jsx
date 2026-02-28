@@ -1,7 +1,24 @@
-export default function OptionEditor({ option, index, onChange, onDelete }) {
+export default function OptionEditor({ option, index, isFirst, isLast, onChange, onDelete, onMoveUp, onMoveDown }) {
   return (
     <div className="flex gap-2 items-center">
-      <span className="text-teal-500 text-xs w-5 shrink-0">{index + 1}.</span>
+      <div className="flex flex-col gap-0.5 shrink-0">
+        <button
+          onClick={onMoveUp}
+          disabled={isFirst}
+          className="text-teal-500 hover:text-orange-400 disabled:text-teal-800 text-[10px] leading-none cursor-pointer disabled:cursor-default"
+          title="Move up"
+        >
+          ▲
+        </button>
+        <button
+          onClick={onMoveDown}
+          disabled={isLast}
+          className="text-teal-500 hover:text-orange-400 disabled:text-teal-800 text-[10px] leading-none cursor-pointer disabled:cursor-default"
+          title="Move down"
+        >
+          ▼
+        </button>
+      </div>
       <input
         type="text"
         value={option.text}

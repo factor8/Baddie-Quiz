@@ -83,9 +83,10 @@ export default function AdminPanel({ onBack }) {
     setMessage({ type: 'success', text: 'Quiz created! Remember to add it to index.js.' })
   }
 
-  const handleBack = () => {
+  const handleBack = async () => {
     if (hasUnsavedChanges && !window.confirm('You have unsaved changes. Leave anyway?')) return
-    onBack()
+    const latest = await api.listQuizzes()
+    onBack(latest)
   }
 
   if (!quiz) {
@@ -168,22 +169,27 @@ export default function AdminPanel({ onBack }) {
         />
       </div>
 
-      {/* Action buttons */}
-      <div className="flex gap-3 pb-20">
-        <button
-          onClick={handleSave}
-          disabled={!hasUnsavedChanges || saving}
-          className="flex-1 bg-gradient-to-r from-orange-600 to-orange-500 text-teal-950 font-display font-bold text-sm py-3 rounded-xl cursor-pointer disabled:opacity-40 disabled:cursor-default hover:shadow-lg hover:shadow-orange-500/20 transition-shadow"
-        >
-          {saving ? 'Saving...' : 'Save Changes'}
-        </button>
-        <button
-          onClick={handleDiscard}
-          disabled={!hasUnsavedChanges}
-          className="bg-teal-900/50 border border-teal-700/50 text-teal-300 text-sm px-6 py-3 rounded-xl cursor-pointer disabled:opacity-40 disabled:cursor-default hover:bg-teal-800/60"
-        >
-          Discard
-        </button>
+      {/* Spacer for fixed bottom bar */}
+      <div className="h-20" />
+
+      {/* Fixed action bar */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-teal-950/90 backdrop-blur-sm border-t border-teal-700/40 px-4 py-3">
+        <div className="max-w-4xl mx-auto flex gap-3">
+          <button
+            onClick={handleSave}
+            disabled={!hasUnsavedChanges || saving}
+            className="flex-1 bg-gradient-to-r from-orange-600 to-orange-500 text-teal-950 font-display font-bold text-sm py-3 rounded-xl cursor-pointer disabled:opacity-40 disabled:cursor-default hover:shadow-lg hover:shadow-orange-500/20 transition-shadow"
+          >
+            {saving ? 'Saving...' : 'Save Changes'}
+          </button>
+          <button
+            onClick={handleDiscard}
+            disabled={!hasUnsavedChanges}
+            className="bg-teal-900/50 border border-teal-700/50 text-teal-300 text-sm px-6 py-3 rounded-xl cursor-pointer disabled:opacity-40 disabled:cursor-default hover:bg-teal-800/60"
+          >
+            Discard
+          </button>
+        </div>
       </div>
     </motion.div>
   )
