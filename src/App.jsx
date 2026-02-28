@@ -9,6 +9,10 @@ const AdminPanel = import.meta.env.DEV
   ? lazy(() => import('./components/admin/AdminPanel'))
   : null
 
+const DevToolbar = import.meta.env.DEV
+  ? lazy(() => import('./components/dev/DevToolbar'))
+  : null
+
 function App() {
   const [screen, setScreen] = useState('landing') // landing | quiz | results | admin
   const [finalScore, setFinalScore] = useState(0)
@@ -66,48 +70,17 @@ function App() {
         )}
       </AnimatePresence>
 
-      {isDev && (
-        <div className="fixed bottom-4 right-4 flex items-center gap-2 z-50">
-          <button
-            onClick={() => setScreen('admin')}
-            className="bg-teal-800/80 text-purple-300 text-xs px-3 py-1.5 rounded-lg border border-teal-600/50 hover:bg-teal-700/80 cursor-pointer"
-          >
-            Editor
-          </button>
-          <button
-            onClick={handleRestart}
-            className="bg-teal-800/80 text-teal-200 text-xs px-3 py-1.5 rounded-lg border border-teal-600/50 hover:bg-teal-700/80 cursor-pointer"
-          >
-            Home
-          </button>
-          <button
-            onClick={() => { setScreen('quiz') }}
-            className="bg-teal-800/80 text-teal-200 text-xs px-3 py-1.5 rounded-lg border border-teal-600/50 hover:bg-teal-700/80 cursor-pointer"
-          >
-            Quiz
-          </button>
-          <button
-            onClick={() => { setFinalScore(25); setScreen('results') }}
-            className="bg-teal-800/80 text-green-300 text-xs px-3 py-1.5 rounded-lg border border-teal-600/50 hover:bg-teal-700/80 cursor-pointer"
-          >
-            Result+
-          </button>
-          <button
-            onClick={() => { setFinalScore(-5); setScreen('results') }}
-            className="bg-teal-800/80 text-red-300 text-xs px-3 py-1.5 rounded-lg border border-teal-600/50 hover:bg-teal-700/80 cursor-pointer"
-          >
-            Result-
-          </button>
-          <select
-            value={currentQuiz.id}
-            onChange={(e) => handleQuizChange(e.target.value)}
-            className="bg-teal-800/80 text-orange-300 text-xs px-2 py-1.5 rounded-lg border border-teal-600/50 cursor-pointer appearance-none"
-          >
-            {quizList.map((q) => (
-              <option key={q.id} value={q.id}>{q.id}</option>
-            ))}
-          </select>
-        </div>
+      {isDev && DevToolbar && (
+        <Suspense fallback={null}>
+          <DevToolbar
+            screen={screen}
+            onNavigate={setScreen}
+            onSetScore={setFinalScore}
+            quizList={quizList}
+            currentQuizId={currentQuiz.id}
+            onQuizChange={handleQuizChange}
+          />
+        </Suspense>
       )}
     </div>
   )
