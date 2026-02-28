@@ -8,6 +8,10 @@ const FIELDS = [
   { key: 'shareButtonText', label: 'Share Button Text', placeholder: 'Share Your L (or W)' },
 ]
 
+const TOGGLES = [
+  { key: 'showCommunityStats', label: 'Show "X% of people got the same result" line' },
+]
+
 export default function QuizMetadataEditor({ quiz, onChange }) {
   const update = (field, value) => {
     onChange({ ...quiz, [field]: value })
@@ -27,6 +31,17 @@ export default function QuizMetadataEditor({ quiz, onChange }) {
             className="w-full bg-teal-950/50 border border-teal-700/40 text-cream/90 text-sm px-3 py-2 rounded-lg focus:outline-none focus:border-orange-500/60"
           />
         </div>
+      ))}
+      {TOGGLES.map(({ key, label }) => (
+        <label key={key} className="flex items-center gap-2 cursor-pointer">
+          <input
+            type="checkbox"
+            checked={quiz[key] !== false}
+            onChange={e => update(key, e.target.checked)}
+            className="accent-orange-500 w-4 h-4"
+          />
+          <span className="text-teal-400 text-xs">{label}</span>
+        </label>
       ))}
     </div>
   )

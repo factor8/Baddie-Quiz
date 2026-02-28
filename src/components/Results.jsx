@@ -94,7 +94,7 @@ export default function Results({ quiz, score, onRestart }) {
       </motion.div>
 
       {/* Community stats */}
-      {yourPercent !== null && (
+      {quiz.showCommunityStats !== false && yourPercent !== null && (
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
