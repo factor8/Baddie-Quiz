@@ -30,11 +30,10 @@ git push -u origin main
 
 ### 2. Connect to Cloudflare Pages
 
-1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com/) → **Workers & Pages** → **Create**
-2. Select the **Pages** tab
-3. Click **Connect to Git**
-4. Authorize Cloudflare to access your GitHub account
-5. Select the **are-you-fumbling-a-baddie** repository
+1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com/) → **Workers & Pages** → **Create application**
+2. Select **Pages** → **Connect to Git**
+3. Authorize Cloudflare to access your GitHub account
+4. Select the **are-you-fumbling-a-baddie** repository
 
 ### 3. Configure Build Settings
 
