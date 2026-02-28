@@ -16,7 +16,7 @@
           "score": 5
         },
         {
-          "text": "She’s so fine it’s actually insane",
+          "text": "She’s so fine it’s actually insane.",
           "score": 3
         },
         {
@@ -24,7 +24,7 @@
           "score": -5
         },
         {
-          "text": "I wouldn’t say anything but it would bother me",
+          "text": "I wouldn’t say anything but it would bother me.",
           "score": -3
         }
       ]
@@ -35,15 +35,15 @@
       "type": "choice",
       "options": [
         {
-          "text": "Cronut and Chill ",
+          "text": "Cronut and Chill.",
           "score": 5
         },
         {
-          "text": "Call her and let her rant",
+          "text": "Call her and let her rant.",
           "score": 4
         },
         {
-          "text": "Let her chill out and ask about it later ",
+          "text": "Let her chill out and ask about it later.",
           "score": -5
         },
         {
@@ -66,11 +66,11 @@
           "score": 5
         },
         {
-          "text": "Try to logic her out of it because she’s being ‘irrational’",
+          "text": "Try to logic her out of it because she’s being ‘irrational’.",
           "score": -5
         },
         {
-          "text": "Tell her she’s overreacting and walk away",
+          "text": "Tell her she’s overreacting and walk away.",
           "score": -8
         }
       ]
@@ -81,19 +81,19 @@
       "type": "choice",
       "options": [
         {
-          "text": "She’s the most interesting person I’ve ever met",
+          "text": "She’s the most interesting person I’ve ever met.",
           "score": 5
         },
         {
-          "text": "She makes me want to be better without even trying",
+          "text": "She makes me want to be better without even trying.",
           "score": 5
         },
         {
-          "text": "She’s hot and the sex is crazy",
+          "text": "She’s hot and the sex is crazy.",
           "score": -2
         },
         {
-          "text": "I honestly don’t know anymore",
+          "text": "I honestly don’t know anymore.",
           "score": -10
         }
       ]
@@ -108,15 +108,15 @@
           "score": 5
         },
         {
-          "text": "Nervous, but I’m showing up for it",
+          "text": "Nervous, but I’m showing up for it.",
           "score": 4
         },
         {
-          "text": "Immediately assume it’s a trap",
+          "text": "Immediately assume it’s a trap.",
           "score": -3
         },
         {
-          "text": "Pretend I didn’t see the text until tomorrow",
+          "text": "Pretend I didn’t see the text until tomorrow.",
           "score": -8
         }
       ]
