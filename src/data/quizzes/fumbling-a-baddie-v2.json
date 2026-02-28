@@ -8,7 +8,7 @@
   "questions": [
     {
       "id": 1,
-      "text": "She posts a thirst trap and it goes viral(AHHH). Your first thought?",
+      "text": "She posts a thirst trap and it goes viral (AHHH). Your first thought?",
       "type": "choice",
       "options": [
         {
@@ -54,7 +54,7 @@
     },
     {
       "id": 3,
-      "text": "When she’s going OFF about something — loud, passionate, maybe a little unhinged — your move is:",
+      "text": "When she’s going OFF about something --  loud, passionate, maybe a little unhinged -- your move is:",
       "type": "choice",
       "options": [
         {
@@ -131,33 +131,6 @@
         "low": "I signed up for this",
         "high": "I'm terrified and hate it"
       }
-    },
-    {
-      "id": 4,
-      "text": "Be honest — can you actually see a future with her?",
-      "type": "choice",
-      "options": [
-        {
-          "text": "Yeah. Her, exactly as she is. That’s the girl I want.",
-          "score": 15
-        },
-        {
-          "text": "Yeah. Her, but if she toned it down.",
-          "score": 10
-        },
-        {
-          "text": "I think so but I’m scared to say it out loud",
-          "score": 2
-        },
-        {
-          "text": "I’m just seeing where it goes (it’s been 6 months)",
-          "score": -10
-        },
-        {
-          "text": "Not really",
-          "score": -15
-        }
-      ]
     }
   ],
   "verdicts": [
@@ -175,8 +148,8 @@
       "emoji": "🟡",
       "min": 10,
       "max": 24,
-      "title": "The Fumble Is Loading…",
-      "description": " You're Slipping... She's noticed. You still have time but the clock is ticking. She's a baddie. Woo that bitch.",
+      "title": " You're Slipping...",
+      "description": "She's noticed. You still have time but the clock is ticking. She's a baddie. Woo that bitch.",
       "color": "orange"
     },
     {
@@ -184,7 +157,7 @@
       "emoji": "🟠",
       "min": 0,
       "max": 9,
-      "title": "Fumble in Progress — All Units Respond",
+      "title": "Fumble in Progress.",
       "description": "Sir, the bag is in the air and you’re watching it fall in slow motion. She’s not asking for the moon. Talk to her. Believe in it. Woo that bitch.",
       "color": "orange"
     },
@@ -193,7 +166,7 @@
       "emoji": "🔴",
       "min": -9999,
       "max": -1,
-      "title": "Certified Fumbler — Sheesh",
+      "title": "Certified Fumbler... Sheesh",
       "description": "She’s going to look incredible at the functions when you see her (if you see her) and realize what you had. This isn’t a wake-up call. This is the obituary. You're cooked. ",
       "color": "red"
     }
